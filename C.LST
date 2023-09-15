@@ -1,0 +1,64 @@
+Microsoft (R) Macro Assembler Version 5.00                  7/3/23 11:36:04
+                                                             Page     1-1
+
+
+       1				;program to input a character from user
+					 and print it 
+       2				 
+       3				dosseg 
+       4				.model small 
+       5 0100				.stack 100h 
+       6 0000				.data 
+       7 0000				.code 
+       8				 
+       9 0000				main proc 
+      10 0000  B4 01			mov ah,1 ; service routine for taking i
+					nputs and accumulator store the value t
+					o 'al' 
+      11 0002  CD 21			int 21h 
+      12				 
+      13 0004  8A D0			mov dl,al ; as accumulator stored the v
+					ale to al so to print the data we must 
+					move the data to data degiter first , h
+					ere it is 'dl' 
+      14 0006  B4 02			mov ah,2 
+      15 0008  CD 21			int 21h 
+      16				 
+      17 000A  B4 4C			mov ah, 4ch 
+      18 000C  CD 21			int 21h 
+      19				 
+      20 000E				main endp 
+      21 000E				end main 
+Microsoft (R) Macro Assembler Version 5.00                  7/3/23 11:36:04
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0000	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0100	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	000E	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+MAIN . . . . . . . . . . . . . .  	N PROC	0000	_TEXT	Length = 000E
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  inputfromuser		
+
+
+     21 Source  Lines
+     21 Total   Lines
+     15 Symbols
+
+  50616 + 465928 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

@@ -1,0 +1,25 @@
+;program to print a single cahrecter on screen
+
+
+dosseg ; DOS segment
+
+.model small
+.stack 100h
+.data
+.code
+
+Main proc
+
+mov dl,'A'
+mov ah,2
+INT 21h
+mov ah,4ch ;comment is written in this way 
+INT 21h
+
+
+
+
+
+Main endp
+
+end main

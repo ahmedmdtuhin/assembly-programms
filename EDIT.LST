@@ -1,0 +1,67 @@
+Microsoft (R) Macro Assembler Version 5.00                  7/3/23 12:18:33
+                                                             Page     1-1
+
+
+       1				;program to input 2 numbers and add the
+					m 
+       2				 
+       3				dosseg 
+       4				.model small 
+       5 0100				.stack 100h 
+       6 0000				.data 
+       7 0000				.code 
+       8				 
+       9 0000				main proc 
+      10				 
+      11 0000  B4 01			mov ah,1 
+      12 0002  CD 21			int 21h 
+      13 0004  8A D8			mov bl,al 
+      14				 
+      15 0006  B4 01			mov ah,1 
+      16 0008  CD 21			int 21h 
+      17 000A  02 D8			add bl,al 
+      18 000C  80 EB 30			sub bl,48 
+      19				 
+      20 000F  8A D3			mov dl,bl 
+      21 0011  B4 02			mov ah,2 
+      22 0013  CD 21			int 21h 
+      23 0015  B4 4C			mov ah,4ch 
+      24 0017  CD 21			int 21h 
+      25				 
+      26				 
+      27				 
+      28 0019				main endp 
+      29 0019				end main 
+Microsoft (R) Macro Assembler Version 5.00                  7/3/23 12:18:33
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0000	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0100	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	0019	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+MAIN . . . . . . . . . . . . . .  	N PROC	0000	_TEXT	Length = 0019
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  input_and_add_2numbers		
+
+
+     29 Source  Lines
+     29 Total   Lines
+     15 Symbols
+
+  50574 + 465970 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors
